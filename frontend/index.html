@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration SaaS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration SaaS</h1>
+        
+        <div id="auth-section">
+            <div class="form-container">
+                <div class="form-tabs">
+                    <button class="tab-button active" onclick="showForm('login')">Login</button>
+                    <button class="tab-button" onclick="showForm('register')">Registrar</button>
+                </div>
+                
+                <form id="login-form" class="auth-form active">
+                    <h2>Login</h2>
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                </form>
+                
+                <form id="register-form" class="auth-form">
+                    <h2>Registrar</h2>
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <input type="password" id="register-password" placeholder="Senha" required>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="dashboard-section" class="hidden">
+            <h2>Dashboard</h2>
+            <button id="logout-btn">Logout</button>
+            <div id="users-list">
+                <h3>Usuários Registrados</h3>
+                <div id="users-container"></div>
+            </div>
+        </div>
+        
+        <div id="message" class="message"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
